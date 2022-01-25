@@ -17,44 +17,42 @@ https://developer.apple.com/documentation/uikit/uicollectionview
 
 1. Top-level Containment and Management
 최상위 컨트롤
-- UICollectionView
-- UICollectionViewController
+    - UICollectionView
+    - UICollectionViewController
 
-- 컬렉션 뷰가 보여지는 시각적인 요소 정의
-- UIScrollView 상속
-- Layout 객체의 정보를 기반으로 데이터 표시
+    - 컬렉션 뷰가 보여지는 시각적인 요소 정의
+    - UIScrollView 상속
+    - Layout 객체의 정보를 기반으로 데이터 표시
 
 2. Content Management
     1) *UICollectionViewDataSource* protocol
-- 필수 요소
-- Content 관리 및 Content 표시에 필요한 View 생성
+        - 필수 요소
+        - Content 관리 및 Content 표시에 필요한 View 생성
 
     2) *UICollectionViewDelegate* protocol
-- 선택 요소
-- 특정 상황에서 View 동작 custom
+        - 선택 요소
+        - 특정 상황에서 View 동작 custom
 
 3. Presentation
-- UICollectionViewReusableView
-- *UICollectionViewCell*
+    - UICollectionViewReusableView
+    - *UICollectionViewCell*
+    - Header, Footer (Supplementary view)
+    - 재사용 뷰
 
-- Header, Footer (Supplementary view)
-- 재사용 뷰
+4. Layout
+UITableView에는 없는 개념: 레이아웃 객체
+    1) UICollectionviewFlowLayout
+    2) UICollectionViewDelegateFlowLayout protocol
 
-4.Layout
-> UITableView에는 없는 개념: 레이아웃 객체
+        - UIColectionViewLayout
+        - UICollectionViewLayoutAttributes
+        - UICollectionViewUpdateItem
 
-- UIColectionViewLayout
-- UICollectionViewLayoutAttributes
-- UICollectionViewUpdateItem
-
-- 각 항목 배치 등 시각적 스타일 담당 (Reusable Cell의 위치, 크기, 시각적 속성 등)
-- View를 직접 소유하지 않는 대신, 속성 객체 Attributes 생성 : 이 속성을 실제 뷰에 적용하는 것은 UICollectionView
-- 데이터 항목 수정 시 UpdateItem 인스턴스 수신
+        - 각 항목 배치 등 시각적 스타일 담당 (Reusable Cell의 위치, 크기, 시각적 속성 등)
+        - View를 직접 소유하지 않는 대신, 속성 객체 Attributes 생성 : 이 속성을 실제 뷰에 적용하는 것은 UICollectionView
+        - 데이터 항목 수정 시 UpdateItem 인스턴스 수신
 
 => 이러한 책임과 역할 분리를 통해 data를 변경하지 않고도 레이아웃을 동적으로 변경 가능
-
-4-1. UICollectionviewFlowLayout
-4-2. UICollectionViewDelegateFlowLayout protocol
 
 - Grid, line-based layout 구현
 - 레이아웃 정보를 동적으로 custom
