@@ -25,11 +25,11 @@ https://developer.apple.com/documentation/uikit/uicollectionview
 - Layout 객체의 정보를 기반으로 데이터 표시
 
 2. Content Management
-2-1. *UICollectionViewDataSource* protocol
+    1) *UICollectionViewDataSource* protocol
 - 필수 요소
 - Content 관리 및 Content 표시에 필요한 View 생성
 
-2-2. *UICollectionViewDelegate* protocol
+    2) *UICollectionViewDelegate* protocol
 - 선택 요소
 - 특정 상황에서 View 동작 custom
 
@@ -257,25 +257,25 @@ https://crystalminds.medium.com/where-are-the-standard-userdefaults-stored-d02bf
 - UICollectionView 를 사용하여 화면 구성하기 프로세스 요약
 1. CollectionViewController를 생성한다.
 2. 해당 collectionViewController 의 collectionViewLayout을 설정한다 
-    2-1. UICollectionViewFlowLayout
+    1) UICollectionViewFlowLayout
 3. UICollectionViewCell 채택하는 class 를 만든다
-    3-1. *override layoutSubviews*
-    3-2. content view(super view) 의 Attribute 를 지정한다.
-    3-3. Subviews 설정한다
+    1) *override layoutSubviews*
+    2) content view(super view) 의 Attribute 를 지정한다.
+    3) Subviews 설정한다
 4. Cell을 Collection view에 register 한다.
-    4-1. forCellWithReuseIdentifier
+    1) forCellWithReuseIdentifier
 5. SupplementaryView (Header, Footer) class 를 만든다
 6. SupplementaryView를 collection view에 register 한다
-    6-1. forSupplementaryViewOfkind
-    6-2. elementKindSectionHeader, elementKindSectionFooter
+    1) forSupplementaryViewOfkind
+    2) elementKindSectionHeader, elementKindSectionFooter
 7. Datasorce, Delegate(opt) 구현
-    7-1. Datasource: 섹션 수, 섹션 당 셀의 수, 무슨 셀인지, 무슨 supplementary view 인지  (이미지, 값…)
-    7-2. Custom한 클래스로 cell 과 supplementary view 의 옷을 입힌다 
+    1) Datasource: 섹션 수, 섹션 당 셀의 수, 무슨 셀인지, 무슨 supplementary view 인지  (이미지, 값…)
+    2) Custom한 클래스로 cell 과 supplementary view 의 옷을 입힌다 
 8. Layout을 정한다.
-    8-1. 레이아웃 스타일이 다른 Section 마다 함수 정의 : UICollectionViewCompositionalLayout 을 반환하는 함수
-    8-2. UICollectionViewCompositionalLayout.init(section:)
-    8-3. Header. Footer가 있을 경우, 따로 아이템 설정 : NSCollectionLayoutBoundarySupplementaryItem 을 반환하는 함수
-    8-4. 위의 함수를 통해 반환된 supplementary view를  8-1 함수에 추가 설정
+    1) 레이아웃 스타일이 다른 Section 마다 함수 정의 : UICollectionViewCompositionalLayout 을 반환하는 함수
+    2) UICollectionViewCompositionalLayout.init(section:)
+    3) Header. Footer가 있을 경우, 따로 아이템 설정 : NSCollectionLayoutBoundarySupplementaryItem 을 반환하는 함수
+    4) 위의 함수를 통해 반환된 supplementary view를  8-1 함수에 추가 설정
     
 
 - Header 만들 때 type 이 반드시 UICollectionReusableView
