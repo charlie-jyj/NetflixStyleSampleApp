@@ -20,6 +20,8 @@
 		92926931279FD2D40027562D /* ContentCollectionViewRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92926930279FD2D40027562D /* ContentCollectionViewRankCell.swift */; };
 		92926935279FD8A60027562D /* ContentCollectionViewMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92926934279FD8A60027562D /* ContentCollectionViewMainCell.swift */; };
 		92926937279FE9CE0027562D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 92926936279FE9CE0027562D /* README.md */; };
+		9292698A27A220380027562D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292698927A220380027562D /* ContentView.swift */; };
+		9292698C27A22AB40027562D /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292698B27A22AB40027562D /* ContentDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		92926930279FD2D40027562D /* ContentCollectionViewRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewRankCell.swift; sourceTree = "<group>"; };
 		92926934279FD8A60027562D /* ContentCollectionViewMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewMainCell.swift; sourceTree = "<group>"; };
 		92926936279FE9CE0027562D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9292698927A220380027562D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9292698B27A22AB40027562D /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				9268FF9D279FB172004E2FF2 /* ContentCollectionViewHeader.swift */,
 				92926930279FD2D40027562D /* ContentCollectionViewRankCell.swift */,
 				92926934279FD8A60027562D /* ContentCollectionViewMainCell.swift */,
+				9292698927A220380027562D /* ContentView.swift */,
+				9292698B27A22AB40027562D /* ContentDetailView.swift */,
 			);
 			path = NetflixStyleSampleApp;
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 				9268FF81279F7E6D004E2FF2 /* SceneDelegate.swift in Sources */,
 				92926931279FD2D40027562D /* ContentCollectionViewRankCell.swift in Sources */,
 				9268FF93279F7FD9004E2FF2 /* HomeViewController.swift in Sources */,
+				9292698C27A22AB40027562D /* ContentDetailView.swift in Sources */,
+				9292698A27A220380027562D /* ContentView.swift in Sources */,
 				92926935279FD8A60027562D /* ContentCollectionViewMainCell.swift in Sources */,
 				9268FF9A279F89E4004E2FF2 /* Content.swift in Sources */,
 				9268FF9C279F951E004E2FF2 /* ContentCollectionViewCell.swift in Sources */,

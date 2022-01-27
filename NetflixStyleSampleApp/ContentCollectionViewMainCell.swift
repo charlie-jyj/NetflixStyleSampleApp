@@ -34,13 +34,12 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         baseStackView.axis = .vertical
         baseStackView.alignment = .center
         baseStackView.distribution = .fillProportionally
-        baseStackView.spacing = 5
-        baseStackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
+        baseStackView.spacing = 10
         [imageView, descriptionLabel, contentStackView].forEach {
             baseStackView.addArrangedSubview($0)
+        }
+        baseStackView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
         
         // imageView
@@ -52,7 +51,7 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         
         // descriptionLabel
         descriptionLabel.font = .systemFont(ofSize: 13)
-        descriptionLabel.textColor = .white
+        descriptionLabel.textColor = .red
         descriptionLabel.sizeToFit()
         
         // contentStackView
@@ -63,6 +62,10 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         
         [plusButton, playButton, infoButton].forEach {
             contentStackView.addArrangedSubview($0)
+        }
+        
+        contentStackView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(30)
         }
         
         [plusButton, infoButton].forEach {
@@ -90,10 +93,6 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         }
         playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
         
-        contentStackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(30)
-        }
-        
         // menuStackView
         menuStackView.axis = .horizontal
         menuStackView.alignment = .center
@@ -116,9 +115,8 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         categoryButton.addTarget(self, action: #selector(categoryButtonTapped), for: .touchUpInside)
         
         menuStackView.snp.makeConstraints {
-            $0.top.equalTo(baseStackView.snp.top)
+            $0.top.equalTo(baseStackView)
             $0.leading.trailing.equalToSuperview().inset(30)
-            $0.height.equalTo(60)
         }
     }
     
